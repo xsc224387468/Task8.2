@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Study Assistant"
+        app:titleTextColor="@android:color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Study Assistant"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:useDefaultMargins="true">
+
+                <!-- Study Plan Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/studyPlanCard"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_calendar"
+                            android:tint="@color/design_default_color_primary"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Study Plan"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Create personalized study plans"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- AI Q&amp;A Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/qaCard"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_question"
+                            android:tint="@color/design_default_color_primary"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AI Q&amp;A"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Get smart answers to your questions"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Note Summary Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/noteSummaryCard"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_note"
+                            android:tint="@color/design_default_color_primary"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Note Summary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Smart summary of your notes"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Profile Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profileCard"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_profile"
+                            android:tint="@color/design_default_color_primary"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Profile"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View and manage your profile"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+            <Button
+                android:id="@+id/btnHistoryPlans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Saved Study Plans"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/design_default_color_primary"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
